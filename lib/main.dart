@@ -3,7 +3,11 @@ import 'package:provider/provider.dart';
 import 'package:weather/views/home_screen/CitySelectionPage.dart';
 import 'package:weather/views/home_screen/providers/CityProvider.dart';
 
-void main() {
+import 'core/services/notification/local_notification_service.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await LocalNotificationService.init();
   runApp(const WeatherApp());
 }
 
