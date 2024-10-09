@@ -15,6 +15,8 @@ class WeatherApp extends StatelessWidget {
     return ListenableProvider(
       create: (context) => CityProvider(),
       builder: (context, child) => const MaterialApp(
+        //لغيتها عشان بتضايقني 😊
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
           body: CitySelectionPage(),
         ),
